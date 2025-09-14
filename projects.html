@@ -3,39 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio - Projects</title>
+  <title>Rachana | Projects</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2e0f1f4d0.js" crossorigin="anonymous"></script>
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    .dark-mode { background: #1a202c; color: #f7fafc; }
+    .dark-mode nav, .dark-mode footer { background: #2d3748; color: #f7fafc; }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body class="bg-gradient-to-r from-indigo-100 via-pink-100 to-purple-100 min-h-screen flex flex-col">
 
   <!-- Navbar -->
-  <nav class="flex justify-between items-center px-6 py-4 bg-white shadow">
-    <h1 class="text-2xl font-bold text-indigo-600">MyPortfolio</h1>
-    <ul class="flex space-x-6 font-medium">
-      <li><a href="index.html" class="hover:text-indigo-600">Home</a></li>
-      <li><a href="about.html" class="hover:text-indigo-600">About</a></li>
-      <li><a href="projects.html" class="text-indigo-600 font-bold">Projects</a></li>
-      <li><a href="contact.html" class="hover:text-indigo-600">Contact</a></li>
-    </ul>
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <h1 class="text-2xl font-bold text-indigo-600">Rachana</h1>
+      <ul class="flex space-x-6 font-medium">
+        <li><a href="index.html" class="hover:text-indigo-600 transition">Home</a></li>
+        <li><a href="about.html" class="hover:text-indigo-600 transition">About</a></li>
+        <li><a href="projects.html" class="text-indigo-600 font-bold">Projects</a></li>
+        <li><a href="contact.html" class="hover:text-indigo-600 transition">Contact</a></li>
+      </ul>
+      <button onclick="toggleDarkMode()" class="ml-4 p-2 rounded-full hover:bg-gray-200">🌙</button>
+    </div>
   </nav>
 
   <!-- Projects Section -->
-  <section class="max-w-6xl mx-auto px-6 py-20">
-    <h2 class="text-3xl font-bold mb-8">My Projects</h2>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="bg-white rounded-2xl shadow p-4 hover:scale-105 transition">
-        <img src="https://via.placeholder.com/400" alt="Project" class="rounded-xl" />
-        <h3 class="text-xl font-semibold mt-4">Project One</h3>
-        <p class="text-gray-600">Short description about this project.</p>
-        <a href="#" class="text-indigo-600 font-medium">View Project →</a>
+  <main class="container mx-auto flex-grow px-6 py-12">
+    <h2 class="text-4xl font-extrabold text-gray-800 text-center mb-12">My Projects</h2>
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+      <!-- Portfolio Website -->
+      <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-2xl transition">
+        <h3 class="text-xl font-bold text-indigo-600 mb-2">Portfolio Website</h3>
+        <p class="text-gray-600">A responsive multi-page portfolio showcasing my work, skills, and resume. Built with HTML, CSS, and Tailwind.</p>
       </div>
-      <div class="bg-white rounded-2xl shadow p-4 hover:scale-105 transition">
-        <img src="https://via.placeholder.com/400" alt="Project" class="rounded-xl" />
-        <h3 class="text-xl font-semibold mt-4">Project Two</h3>
-        <p class="text-gray-600">Short description about this project.</p>
-        <a href="#" class="text-indigo-600 font-medium">View Project →</a>
+
+      <!-- Harbonet -->
+      <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-2xl transition">
+        <h3 class="text-xl font-bold text-indigo-600 mb-2">Harbonet</h3>
+        <p class="text-gray-600">A map-based project aimed at helping people in need by connecting resources, volunteers, and communities efficiently.</p>
       </div>
+
+      <!-- Hackathon 9.0 -->
+      <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-2xl transition">
+        <h3 class="text-xl font-bold text-indigo-600 mb-2">Hackathon 9.0 Project</h3>
+        <p class="text-gray-600">An innovative solution developed during Hackathon 9.0, focused on teamwork, creativity, and impactful problem-solving.</p>
+      </div>
+
+      <!-- Unauthorized Account Finder -->
+      <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-2xl transition">
+        <h3 class="text-xl font-bold text-indigo-600 mb-2">Unauthorized Account Finder</h3>
+        <p class="text-gray-600">A website project for detecting unauthorized accounts using IP tracking and security analysis methods.</p>
+      </div>
+
     </div>
-  </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white py-4 text-center text-gray-500 text-sm shadow-inner">
+    © 2025 Rachana. Built with ❤️ and Tailwind CSS.
+  </footer>
+
+  <script>
+    function toggleDarkMode(){ document.body.classList.toggle('dark-mode'); }
+  </script>
 </body>
 </html>

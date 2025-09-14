@@ -3,39 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio - About</title>
+  <title>Rachana | About</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2e0f1f4d0.js" crossorigin="anonymous"></script>
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    .dark-mode { background: #1a202c; color: #f7fafc; }
+    .dark-mode nav, .dark-mode footer { background: #2d3748; color: #f7fafc; }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body class="bg-gradient-to-r from-indigo-100 via-pink-100 to-purple-100 min-h-screen flex flex-col">
 
   <!-- Navbar -->
-  <nav class="flex justify-between items-center px-6 py-4 bg-white shadow">
-    <h1 class="text-2xl font-bold text-indigo-600">MyPortfolio</h1>
-    <ul class="flex space-x-6 font-medium">
-      <li><a href="index.html" class="hover:text-indigo-600">Home</a></li>
-      <li><a href="about.html" class="text-indigo-600 font-bold">About</a></li>
-      <li><a href="projects.html" class="hover:text-indigo-600">Projects</a></li>
-      <li><a href="contact.html" class="hover:text-indigo-600">Contact</a></li>
-    </ul>
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <h1 class="text-2xl font-bold text-indigo-600">Rachana</h1>
+      <ul class="flex space-x-6 font-medium">
+        <li><a href="index.html" class="hover:text-indigo-600 transition">Home</a></li>
+        <li><a href="about.html" class="text-indigo-600 font-bold">About</a></li>
+        <li><a href="projects.html" class="hover:text-indigo-600 transition">Projects</a></li>
+        <li><a href="contact.html" class="hover:text-indigo-600 transition">Contact</a></li>
+      </ul>
+      <button onclick="toggleDarkMode()" class="ml-4 p-2 rounded-full hover:bg-gray-200">🌙</button>
+    </div>
   </nav>
 
   <!-- About Section -->
-  <section class="max-w-4xl mx-auto px-6 py-20">
-    <h2 class="text-3xl font-bold mb-4">About Me</h2>
-    <p class="text-lg leading-relaxed">
-      I am a passionate web developer with skills in HTML, CSS, JavaScript, and Tailwind CSS.
-      I love designing clean and interactive websites. Beyond coding, I enjoy solving problems,
-      collaborating on projects, and learning new technologies.
-    </p>
-    <div class="mt-8">
-      <h3 class="text-2xl font-semibold mb-2">Skills</h3>
-      <ul class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-        <li class="bg-white shadow rounded-2xl py-4">HTML</li>
-        <li class="bg-white shadow rounded-2xl py-4">CSS</li>
-        <li class="bg-white shadow rounded-2xl py-4">JavaScript</li>
-        <li class="bg-white shadow rounded-2xl py-4">Tailwind</li>
-      </ul>
+  <main class="container mx-auto flex-grow px-6 py-12">
+    <div class="max-w-3xl mx-auto text-center">
+      <img src="https://via.placeholder.com/200" alt="Profile" class="mx-auto rounded-full shadow-lg mb-6">
+      <h2 class="text-4xl font-extrabold text-gray-800 mb-4">Hi, I’m Rachana 👋</h2>
+      <p class="text-lg text-gray-700 mb-6">
+        I’m a 2nd-year student with a passion for learning, problem-solving, and creativity.  
+        My journey so far has been about exploring programming, working on projects, and contributing in teams.
+      </p>
+
+      <!-- Resume Button -->
+      <a href="resume.pdf" download
+         class="bg-pink-500 text-white px-6 py-3 rounded-lg shadow hover:bg-pink-600 transition">
+        📄 Download Resume
+      </a>
     </div>
-  </section>
+
+    <!-- Skills -->
+    <section class="mt-12 text-center">
+      <h3 class="text-3xl font-semibold text-gray-800 mb-6">Skills</h3>
+      <div class="flex flex-wrap justify-center gap-4">
+        <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full"><i class="fab fa-html5"></i> HTML</span>
+        <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full"><i class="fab fa-css3-alt"></i> CSS</span>
+        <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full"><i class="fab fa-js"></i> JavaScript</span>
+        <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full"><i class="fab fa-python"></i> Python</span>
+        <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full"><i class="fas fa-users"></i> Teamwork</span>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white py-4 text-center text-gray-500 text-sm shadow-inner">
+    © 2025 Rachana. Built with ❤️ and Tailwind CSS.
+  </footer>
+
+  <script>
+    function toggleDarkMode(){ document.body.classList.toggle('dark-mode'); }
+  </script>
 </body>
 </html>

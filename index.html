@@ -3,30 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio - Home</title>
+  <title>Rachana | Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2e0f1f4d0.js" crossorigin="anonymous"></script>
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    .dark-mode { background: #1a202c; color: #f7fafc; }
+    .dark-mode nav, .dark-mode footer { background: #2d3748; color: #f7fafc; }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body class="bg-gradient-to-r from-pink-100 via-purple-100 to-indigo-100 min-h-screen flex flex-col">
 
   <!-- Navbar -->
-  <nav class="flex justify-between items-center px-6 py-4 bg-white shadow">
-    <h1 class="text-2xl font-bold text-indigo-600">MyPortfolio</h1>
-    <ul class="flex space-x-6 font-medium">
-      <li><a href="index.html" class="hover:text-indigo-600">Home</a></li>
-      <li><a href="about.html" class="hover:text-indigo-600">About</a></li>
-      <li><a href="projects.html" class="hover:text-indigo-600">Projects</a></li>
-      <li><a href="contact.html" class="hover:text-indigo-600">Contact</a></li>
-    </ul>
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <h1 class="text-2xl font-bold text-indigo-600">Rachana</h1>
+      <ul class="flex space-x-6 font-medium">
+        <li><a href="index.html" class="text-indigo-600 font-bold">Home</a></li>
+        <li><a href="about.html" class="hover:text-indigo-600 transition">About</a></li>
+        <li><a href="projects.html" class="hover:text-indigo-600 transition">Projects</a></li>
+        <li><a href="contact.html" class="hover:text-indigo-600 transition">Contact</a></li>
+      </ul>
+      <button onclick="toggleDarkMode()" class="ml-4 p-2 rounded-full hover:bg-gray-200">🌙</button>
+    </div>
   </nav>
 
-  <!-- Hero -->
-  <section class="flex flex-col items-center justify-center h-screen bg-gradient-to-b from-purple-500 to-indigo-600 text-white">
-    <h1 class="text-5xl font-bold">Hi, I'm [Your Name]</h1>
-    <p class="mt-4 text-xl">Designer | Developer | Creator</p>
-    <a href="projects.html"
-       class="mt-6 px-6 py-3 bg-white text-indigo-600 font-semibold rounded-2xl shadow hover:bg-gray-200">
-      View My Work
-    </a>
-  </section>
+  <!-- Hero Section -->
+  <main class="flex-grow flex items-center justify-center text-center px-6">
+    <div>
+      <h2 class="text-5xl font-extrabold text-gray-800 mb-4">Hi, I’m <span class="text-indigo-600">Rachana</span></h2>
+      <p class="text-lg text-gray-700 mb-6">2nd Year Student | Learner | Developer | Innovator</p>
+
+      <!-- Resume Button -->
+      <a href="resume.pdf" download
+         class="bg-pink-500 text-white px-6 py-3 rounded-lg shadow hover:bg-pink-600 transition">
+        📄 Download Resume
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white py-4 text-center text-gray-500 text-sm shadow-inner">
+    © 2025 Rachana. Built with ❤️ and Tailwind CSS.
+  </footer>
+
+  <script>
+    function toggleDarkMode(){ document.body.classList.toggle('dark-mode'); }
+  </script>
 </body>
 </html>
